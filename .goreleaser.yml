@@ -14,23 +14,8 @@ builds:
       - windows
       - darwin
     ldflags:
-      - -X github.com/saucectl/saucectl/cli/version.Version={{.Version}}
-      - -X github.com/saucectl/saucectl/cli/version.GitCommit={{.Commit}}
-brews:
-  - github:
-      owner: saucelabs
-      name: homebrew-saucectl
-    folder: Formula
-    test: |
-      system "#{bin}/goreleaser -v"
-    name: saucectl
-    homepage: "https://saucelabs.com/"
-    description: "Saucectl is a command-line interface to run testrunner tests"
-    commit_author:
-      name: devx-sauce-bot
-      email: devx.bot@saucelabs.com
-    dependencies:
-      - docker
+      - -X github.com/FriggaHel/saucectl/cli/version.Version={{.Version}}
+      - -X github.com/FriggaHel/saucectl/cli/version.GitCommit={{.Commit}}
 archives:
   - replacements:
       darwin: mac
